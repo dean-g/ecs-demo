@@ -56,7 +56,7 @@ jobs:
           echo "BUILDING DOCKER IMAGE from ./app/Dockerfile..."
           echo "=========================================================="
 
-          docker build --provenance=false \
+          docker build \
             -t ${ECR_REGISTRY}/${ECR_REPOSITORY}:${TAG_SHA} ./app
 
           docker tag \
